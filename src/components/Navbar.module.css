@@ -1,0 +1,44 @@
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.logoContainer {
+  overflow: hidden;
+}
+
+.appscrip {
+  color: #1e3ba3;
+}
+
+.icons {
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.icons select {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.navbarContainer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 2rem;
+  font-weight: bolder;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #d7d7d7;
+}
+
+.navbarContainer2 div:hover {
+  border-bottom: 1px solid black;
+}

@@ -1,0 +1,89 @@
+.discoverProduct {
+  /* border: 1px solid red; */
+  text-align: center;
+  font-family: "Simplon Norm";
+  margin-bottom: 6rem;
+  margin-top: 6rem;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.subheading {
+  font-size: 22px;
+  width: 60%;
+  margin: auto;
+  line-height: 40px;
+}
+
+.itemCountFilter {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid rgb(214, 214, 214);
+  border-bottom: 2px solid rgb(211, 211, 211);
+  padding: 1rem 0;
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+
+.itemCountFilterleft {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.count {
+  font-weight: 700;
+}
+.filtertoggle {
+  color: #888792;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.recomSelect {
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.productNFilterContainer {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 1rem;
+}
+
+.filterContainer {
+  width: 30%;
+}
+.filterContainer > div {
+  padding: 1rem 0;
+  border-bottom: 2px solid rgb(211, 211, 211);
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.category > select {
+  font-size: 16px;
+  outline: none;
+  border: none;
+}
+
+.productListingContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.productListingContainer2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}

@@ -1,0 +1,113 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  border-bottom: 1px solid white;
+  margin-top: 1rem;
+}
+
+.subscribeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subscribeContainer > p:nth-child(1) {
+  font-size: 20px;
+  font-weight: 700;
+}
+.subscribeContainer > p:nth-child(2) {
+  font-size: 16px;
+}
+.inputContainer {
+  margin-top: 4rem;
+  font-size: 18px;
+}
+.inputContainer input {
+  width: 384px;
+  background-color: white;
+  padding: 1rem;
+  color: black;
+  outline: none;
+  border: none;
+}
+
+.inputContainer button {
+  padding: 1rem 3rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  margin-left: 1rem;
+  border-radius: 4px;
+  opacity: 0.3;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  gap: 1.5rem;
+}
+.contactContainer > p:nth-child(1) {
+  font-size: 20px;
+  font-weight: 700;
+}
+.contactContainer > p:nth-child(2) {
+  font-size: 16px;
+}
+.contactContainer > p:nth-child(3) {
+  font-size: 16px;
+}
+
+.contactContainer > p:nth-child(4) {
+  font-size: 20px;
+  font-weight: 700;
+}
+.currencyText {
+  font-size: 14px;
+}
+
+.footer2 {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 2rem;
+}
+.footer2 p {
+  margin-top: 1.5rem;
+}
+
+.footer2Title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.socialIcons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.socialIcons div {
+  display: flex;
+  border: 1px solid white;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+.socialLogos {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.copyright {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  font-size: 14px;
+}
