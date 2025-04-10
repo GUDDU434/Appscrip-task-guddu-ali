@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import currencyLogo from "../assets/Language.png";
+import currencyLogo from "../assets/lang.png";
 import { FaInstagram } from "react-icons/fa";
 import { RiLinkedinFill } from "react-icons/ri";
 import gpay from "../assets/gpay.png";
