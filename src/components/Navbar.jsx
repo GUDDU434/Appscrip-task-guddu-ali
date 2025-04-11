@@ -14,7 +14,7 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </div>
         <div>
-          <h1 className={styles.appscrip}>appscrip</h1>
+          <h1 className={styles.appscrip}>LOGO</h1>
         </div>
         <div className={styles.iconsContainer}>
           <div className={styles.icons}>

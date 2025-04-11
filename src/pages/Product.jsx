@@ -6,11 +6,13 @@ import ProductCard from "../components/ProductCard";
 function Product() {
   const [filterToggle, setFilterToggle] = useState(false);
   const [data, setData] = useState([]);
-  const [category, setCategory] = useState(null);
+  const [category, setCategory] = useState("all");
 
   useEffect(() => {
     let url = "https://fakestoreapi.com/products";
-    if (category) {
+    if (category === "all") {
+      url = "https://fakestoreapi.com/products";
+    } else {
       url = `${url}/category/${category}`;
     }
     fetch(url)
@@ -20,6 +22,10 @@ function Product() {
         setData(data);
       });
   }, [category]);
+
+  const handlecategory = (cat) => {
+    setCategory(cat);
+  };
   return (
     <>
       <div className={styles.discoverProduct}>
@@ -42,7 +48,7 @@ function Product() {
           </p>
         </div>
         <div>
-          <select className={styles.recomSelect} name="" id="">
+          <select className={styles.recomSelect} name="" id="recommended">
             <option value="recommended">RECOMMENDED</option>
             <option value="new_first">NEW FIRST</option>
             <option value="popular">Popular</option>
@@ -62,19 +68,65 @@ function Product() {
               <input type="checkbox" name="customizable" id="customizable" />
               {" CUSTOMIZABLE"}
             </div>
-            <div className={styles.category}>
+            <div
+              className={styles.category}
+            >
               {" CATEGORY"}
-              <select
-                name=""
-                id=""
-                onChange={(e) => setCategory(e.target.value)}
-              >
-                <option value="">ALL</option>
-                <option value="jewelery">JWELERY</option>
-                <option value="electronics">ELECTRONICS</option>
-                <option value="men's clothing">MEN</option>
-                <option value="women's clothing">WOMEN</option>
-              </select>
+
+              {category && (
+                <>
+                  <div
+                    className={
+                      category === "all"
+                        ? styles.selected
+                        : styles.unselected
+                    }
+                    onClick={() => handlecategory("all")}
+                  >
+                    ALL
+                  </div>
+                  <div
+                    className={
+                      category === "jewelery"
+                        ? styles.selected
+                        : styles.unselected
+                    }
+                    onClick={() => handlecategory("jewelery")}
+                  >
+                    JWELERY
+                  </div>
+                  <div
+                    className={
+                      category === "electronics"
+                        ? styles.selected
+                        : styles.unselected
+                    }
+                    onClick={() => handlecategory("electronics")}
+                  >
+                    ELECTRONICS
+                  </div>
+                  <div
+                    className={
+                      category === "men's clothing"
+                        ? styles.selected
+                        : styles.unselected
+                    }
+                    onClick={() => handlecategory("men's clothing")}
+                  >
+                    MEN
+                  </div>
+                  <div
+                    className={
+                      category === null || category === "women's clothing"
+                        ? styles.selected
+                        : styles.unselected
+                    }
+                    onClick={() => handlecategory("women's clothing")}
+                  >
+                    WOMEN
+                  </div>
+                </>
+              )}
             </div>
             <div>{" IDEAL FOR"}</div>
             <div>{" OCCASION"}</div>

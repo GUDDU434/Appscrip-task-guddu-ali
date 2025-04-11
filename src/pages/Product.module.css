@@ -19,8 +19,11 @@
 }
 
 .itemCountFilter {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-top: 2px solid rgb(214, 214, 214);
   border-bottom: 2px solid rgb(211, 211, 211);
   padding: 1rem 0;
@@ -47,11 +50,14 @@
   border: none;
   font-size: 18px;
   font-weight: 700;
+  padding: 1rem;
+  text-align: end;
 }
 
 .productNFilterContainer {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
-  /* justify-content: space-between; */
   gap: 1rem;
 }
 
@@ -65,15 +71,22 @@
 
 .category {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   padding: 1rem 0;
 }
 
-.category > select {
-  font-size: 16px;
-  outline: none;
-  border: none;
+.category > div {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.unselected {
+  font-weight: normal;
 }
 
 .productListingContainer {

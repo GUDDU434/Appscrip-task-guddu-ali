@@ -3,6 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .logoContainer {
@@ -10,7 +12,10 @@
 }
 
 .appscrip {
-  color: #1e3ba3;
+  margin-left: 10rem;
+
+  font-weight: 700;
+  font-family: sans-serif;
 }
 
 .icons {
@@ -18,7 +23,7 @@
   display: flex;
   gap: 1rem;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .icons select {
