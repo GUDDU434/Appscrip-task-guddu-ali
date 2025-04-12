@@ -2,48 +2,85 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   max-width: 1280px;
   margin: 0 auto;
+  position: relative;
 }
 
-.logoContainer {
-  overflow: hidden;
+.hamburger {
+  display: none;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoImg {
+  height: 40px;
 }
 
 .appscrip {
-  margin-left: 10rem;
-
   font-weight: 700;
   font-family: sans-serif;
+  text-align: center;
+  flex: 1;
 }
 
-.icons {
-  cursor: pointer;
+.rightIcons {
   display: flex;
   gap: 1rem;
   align-items: center;
   font-size: 1.8rem;
-}
-
-.icons select {
-  outline: none;
-  border: none;
-  background-color: transparent;
-  font-weight: bold;
+  cursor: pointer;
 }
 
 .navbarContainer2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem;
   gap: 2rem;
   font-weight: bolder;
-  padding-bottom: 1rem;
+  padding: 1rem 2rem;
   border-bottom: 2px solid #d7d7d7;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbarContainer2 div:hover {
   border-bottom: 1px solid black;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .appscrip {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .rightIcons {
+    font-size: 1.6rem;
+  }
+
+  .navbarContainer2 {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .showMenu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block; /* show only on small screens */
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
 }

@@ -46,6 +46,12 @@ function Product() {
           >
             <IoIosArrowBack /> {filterToggle ? "HIDE FILTERS" : "SHOW FILTERS"}
           </p>
+          <p
+            className={styles.filtertoggleMobile}
+            onClick={() => setFilterToggle((prev) => !prev)}
+          >
+            FILTERS
+          </p>
         </div>
         <div>
           <select className={styles.recomSelect} name="" id="recommended">
@@ -68,18 +74,14 @@ function Product() {
               <input type="checkbox" name="customizable" id="customizable" />
               {" CUSTOMIZABLE"}
             </div>
-            <div
-              className={styles.category}
-            >
+            <div className={styles.category}>
               {" CATEGORY"}
 
               {category && (
                 <>
                   <div
                     className={
-                      category === "all"
-                        ? styles.selected
-                        : styles.unselected
+                      category === "all" ? styles.selected : styles.unselected
                     }
                     onClick={() => handlecategory("all")}
                   >

@@ -1,35 +1,38 @@
-import React from "react";
-import { CiSearch } from "react-icons/ci";
-import { CiHeart } from "react-icons/ci";
+import React, { useState } from "react";
+import { CiSearch, CiHeart, CiUser } from "react-icons/ci";
 import { IoBagRemoveOutline } from "react-icons/io5";
-import { CiUser } from "react-icons/ci";
+import { RxHamburgerMenu } from "react-icons/rx";
 import logo from "../assets/compLogo.png";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <div className={styles.navbarContainer}>
-        <div className={styles.logoContainer}>
-          <img src={logo} alt="logo" />
+        <div className={styles.leftSection}>
+          <RxHamburgerMenu
+            className={styles.hamburger}
+            onClick={() => setMenuOpen((prev) => !prev)}
+          />
+          <img src={logo} alt="logo" className={styles.logoImg} />
         </div>
-        <div>
-          <h1 className={styles.appscrip}>LOGO</h1>
-        </div>
-        <div className={styles.iconsContainer}>
-          <div className={styles.icons}>
-            <CiSearch />
-            <CiHeart />
-            <IoBagRemoveOutline />
-            <CiUser />
-            <select name="" id="">
-              <option value="English">ENG</option>
-              <option value="Hindi">HIN</option>
-            </select>
-          </div>
+
+        <div className={styles.appscrip}>LOGO</div>
+
+        <div className={styles.rightIcons}>
+          <CiSearch />
+          <CiHeart />
+          <IoBagRemoveOutline />
         </div>
       </div>
-      <div className={styles.navbarContainer2}>
+
+      <div
+        className={`${styles.navbarContainer2} ${
+          menuOpen ? styles.showMenu : ""
+        }`}
+      >
         <div>SHOP</div>
         <div>SKILLS</div>
         <div>STORIES</div>

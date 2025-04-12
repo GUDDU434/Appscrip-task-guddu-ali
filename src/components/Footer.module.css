@@ -113,3 +113,74 @@
   padding: 1rem;
   font-size: 14px;
 }
+
+/* At the bottom of Footer.module.css file */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .inputContainer input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .inputContainer button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .footer2 {
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 1rem;
+  }
+
+  .footer2 > div {
+    border-top: 1px solid #ffffff3a;
+    padding: 1rem 0;
+  }
+
+  .footer2Title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .footer2Title::after {
+    content: "+";
+    font-size: 24px;
+  }
+
+  .footer2Title.open::after {
+    content: "-";
+  }
+
+  .footer2 p:not(.footer2Title) {
+    display: none;
+    margin: 0.5rem 0;
+  }
+
+  .footer2 .open + p,
+  .footer2 .open ~ p {
+    display: block;
+  }
+
+  .socialIcons {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .socialLogos {
+    flex-wrap: wrap;
+  }
+
+  .copyright {
+    padding: 1rem;
+    text-align: center;
+    font-size: 12px;
+  }
+}
